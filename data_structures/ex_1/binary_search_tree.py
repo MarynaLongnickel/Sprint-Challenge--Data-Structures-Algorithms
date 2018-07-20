@@ -12,19 +12,18 @@ class BinarySearchTree:
         self.R = R
 
     def depth_first_for_each(self):
-        nodes = []
-        stack = [self.root]
+        visited, stack = [], [self.root]
         while stack:
-            cur_node = stack.pop(0)
-            if cur_node not in nodes:
-                nodes.append(cur_node)
-                if cur_node.L:
-                    if cur_node.L not in nodes:
-                        stack.append(cur_node.L)
-                if cur_node.R:
-                    if cur_node.R not in nodes:
-                        stack.append(cur_node.R)
-        return [n.value for n in nodes]
+            vertex = stack.pop()
+            if vertex not in visited:
+                visited.append(vertex)
+                if vertex.R:
+                    if vertex.R not in visited:
+                        stack.append(vertex.R)
+                if vertex.L:
+                    if vertex.L not in visited:
+                        stack.append(vertex.L)
+        return [n.value for n in visited]
 
     def breadth_first_for_each(self):
         nodes = []
