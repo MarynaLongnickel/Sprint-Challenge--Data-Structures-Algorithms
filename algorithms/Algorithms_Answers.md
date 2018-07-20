@@ -1,15 +1,24 @@
 Add your answers to the Algorithms exercises here.
 
 a) O(n)
+
 b) O(log(n))
+
 c) O(n)
+
 d) O(nlog(n))
+
 e) O(n^3)
+
 f) O(n)
+
 g) O(n)
 
+
 II.
+
 a)
+
 def maxDiff(l):
     n = len(l)
     max_diff = l[1] - l[0]
@@ -24,6 +33,7 @@ def maxDiff(l):
     return max_diff
     
  b)
+ 
  def drop(floors):
 
     m = [[0 for x in range(floors + 1)] for x in range(floors + 1)]
@@ -45,6 +55,8 @@ def maxDiff(l):
     return m[floors][floors]
     
   III.
+  
   a) O(n) because the pivot will be each element in the list once
+  
   b) O(nlog(n)) because first we have to find the median, which might be the last element in the list, and then sort, which splits the list in half each time.
     
